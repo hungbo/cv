@@ -21,10 +21,13 @@ $('a.smooth-scroll')
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
     // Does a scroll target exist?
+    console.log(this);
     if (target.length) {
       // Only prevent default if animation is actually gonna happen
       event.preventDefault();
+      // hide a section
       $('button.navbar-toggler').click();
+      
       $('html, body').animate({
         scrollTop: target.offset().top
       }, 1000, function() {
