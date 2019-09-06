@@ -24,6 +24,7 @@ $('a.smooth-scroll')
     if (target.length) {
       // Only prevent default if animation is actually gonna happen
       event.preventDefault();
+      $('button.navbar-toggler').click();
       $('html, body').animate({
         scrollTop: target.offset().top
       }, 1000, function() {
